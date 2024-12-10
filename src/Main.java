@@ -11,6 +11,7 @@ public class Main {
         int n2 = input.nextInt();
         Somme(n1,n2);
         Soustra(n1,n2);
+        Produit(n1,n2);
 
 
     }
@@ -30,6 +31,15 @@ public class Main {
         soustra = a - b;
         System.out.println("la soustraction est : " + soustra);
     }
+
+    // la fonction de multiplication
+    public static void Produit(int a, int b)
+    {
+        int produit;
+        produit = a * b;
+        System.out.println("le produit est : " + produit);
+    }
+
 
 
 }

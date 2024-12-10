@@ -21,38 +21,48 @@ public class Main {
         switch (choix) {
             case 1:
                 System.out.print("Entrez le premiere nombre : ");
-                int n1 = input.nextInt();
+                int a1 = input.nextInt();
                 System.out.print("Entrez le dexieme nombre : ");
-                int n11 = input.nextInt();
-                Somme(n1, n11);
+                int b1 = input.nextInt();
+                Somme(a1, b1);
                 break;
             case 2:
                 System.out.print("Entrez le premiere nombre : ");
-                int n2 = input.nextInt();
+                int a2 = input.nextInt();
                 System.out.print("Entrez le dexieme nombre : ");
-                int n22 = input.nextInt();
-                Soustra(n2, n22);
+                int b2 = input.nextInt();
+                Soustra(a2, b2);
                 break;
             case 3:
                 System.out.print("Entrez le premiere nombre : ");
-                int n3 = input.nextInt();
+                int a3 = input.nextInt();
                 System.out.print("Entrez le dexieme nombre : ");
-                int n33 = input.nextInt();
-                Produit(n3, n33);
+                int b3 = input.nextInt();
+                Produit(a3, b3);
                 break;
             case 4:
                 System.out.print("Entrez le premiere nombre : ");
-                int n4 = input.nextInt();
+                int a4 = input.nextInt();
                 System.out.print("Entrez le dexieme nombre : ");
-                int n44 = input.nextInt();
-                Division(n4, n44);
+                int b4 = input.nextInt();
+                Division(a4, b4);
                 break;
             case 5:
                 System.out.print("Entrez le premiere nombre : ");
-                int n5 = input.nextInt();
+                int a5 = input.nextInt();
                 System.out.print("Entrez le dexieme nombre : ");
-                int n55 = input.nextInt();
-                Puissance(n5, n55);
+                int b5 = input.nextInt();
+                Puissance(a5, b5);
+                break;
+            case 6:
+                System.out.print("Entrez le premiere nombre : ");
+                int a6 = input.nextInt();
+                racineCarree(a6);
+                break;
+            case 7:
+                System.out.print("Entrez un nombre entier : ");
+                int n = input.nextInt();
+                Factorielle(n);
                 break;
             default:
                 System.out.println("Choix invalide !");
@@ -60,7 +70,6 @@ public class Main {
 
 
     }
-
 
     // la fonction d'addition
     public static void Somme(int a, int b)
@@ -106,6 +115,29 @@ public class Main {
             puissance *= a;
         }
         System.out.println("La puissance est : " + puissance);
+    }
+
+    // la fonction de racine carrée
+    public static void racineCarree(double n) {
+        if (n >= 0) {
+            double result = Math.sqrt(n);
+            System.out.printf("La racine carrée de %.2f est : %.2f",n,result);
+        } else {
+            System.out.println("Erreur : la racine carrée d'un nombre négatif n'est pas définie !");
+        }
+    }
+
+    // la fonction de factorielle
+    public static void Factorielle(int n) {
+        if (n < 0) {
+            System.out.println("Erreur : la factorielle d'un nombre négatif n'est pas définie !");
+        } else {
+            long fact = 1;
+            for (int i = 1; i <= n; i++) {
+                fact *= i;
+            }
+            System.out.println("La factorielle de " + n + " est : " + fact);
+        }
     }
 
 

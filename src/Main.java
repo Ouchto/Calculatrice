@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+
         System.out.print("Entrez le premiere nombre : ");
         int n1 = input.nextInt();
         System.out.print("Entrez le dexieme nombre : ");
@@ -11,7 +12,7 @@ public class Main {
         Somme(n1,n2);
 
     }
-    
+
     // la fonction d'addition
     public static void Somme(int a, int b)
     {

@@ -11,6 +11,7 @@ public class Main {
         Somme(n1,n2);
 
     }
+    
     // la fonction d'addition
     public static void Somme(int a, int b)
     {

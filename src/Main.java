@@ -9,9 +9,12 @@ public class Main {
         int n1 = input.nextInt();
         System.out.print("Entrez le dexieme nombre : ");
         int n2 = input.nextInt();
+
+
         Somme(n1,n2);
         Soustra(n1,n2);
         Produit(n1,n2);
+        Division(n1,n2);
 
 
     }
@@ -38,6 +41,19 @@ public class Main {
         int produit;
         produit = a * b;
         System.out.println("le produit est : " + produit);
+    }
+
+    // la fonction de division
+    public static void Division(int a, int b)
+    {
+        if (b != 0){
+            int division;
+            division = a / b;
+            System.out.println("la division est : " + division);
+        }else {
+            System.out.println("erreur: division par 0 ");
+        }
+
     }
 
 

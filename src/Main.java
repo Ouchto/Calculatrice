@@ -14,6 +14,7 @@ public class Main {
         System.out.println("6. Racine carrée ");
         System.out.println("7. Factorielle ");
 
+
         System.out.print("Entrez le choix : ");
         int choix = input.nextInt();
 

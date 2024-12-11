@@ -4,53 +4,62 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        int[] table = new int[2];
+        int choix;
+        do {
+            System.out.println("===============[Menu]===============");
+            System.out.println("Choisissez une opération :");
+            System.out.println("1. Addition ");
+            System.out.println("2. Soustraction ");
+            System.out.println("3. Multiplication ");
+            System.out.println("4. Division ");
+            System.out.println("5. Puissance ");
+            System.out.println("6. Racine carrée ");
+            System.out.println("7. Factorielle ");
+            System.out.println("8. Quitter ");
 
-        System.out.println("Choisissez une opération :");
-        System.out.println("1. Addition ");
-        System.out.println("2. Soustraction ");
-        System.out.println("3. Multiplication ");
-        System.out.println("4. Division ");
-        System.out.println("5. Puissance ");
-        System.out.println("6. Racine carrée ");
-        System.out.println("7. Factorielle ");
+            System.out.print("Entrez le choix : ");
+            choix = input.nextInt();
 
-        System.out.print("Entrez le choix : ");
-        int choix = input.nextInt();
+            switch (choix) {
+                case 1:
+                    table = Nums(input);
+                    Somme(table[0], table[1]);
+                    break;
+                case 2:
+                    table = Nums(input);
+                    Soustra(table[0], table[1]);
+                    break;
+                case 3:
+                    table= Nums(input);
+                    Produit(table[0], table[1]);
+                    break;
+                case 4:
+                    table = Nums(input);
+                    Division(table[0], table[1]);
+                    break;
+                case 5:
+                    table = Nums(input);
+                    Puissance(table[0], table[1]);
+                    break;
+                case 6:
+                    System.out.print("Entrez le nombre : ");
+                    int a6 = input.nextInt();
+                    racineCarree(a6);
+                    break;
+                case 7:
+                    System.out.print("Entrez un nombre entier : ");
+                    int n = input.nextInt();
+                    Factorielle(n);
+                    break;
+                case 8:
+                    System.out.println("Au revoir !!");
+                    break;
+                default:
+                    System.out.println("Choix invalide !");
+            }
+        }while (choix != 8);
 
-        switch (choix) {
-            case 1:
-                var table1 = Nums(input);
-                Somme(table1[0], table1[1]);
-                break;
-            case 2:
-                var table2 = Nums(input);
-                Soustra(table2[0], table2[1]);
-                break;
-            case 3:
-                var table3 = Nums(input);
-                Produit(table3[0], table3[1]);
-                break;
-            case 4:
-                var table4 = Nums(input);
-                Division(table4[0], table4[1]);
-                break;
-            case 5:
-                var table5 = Nums(input);
-                Puissance(table5[0], table5[1]);
-                break;
-            case 6:
-                System.out.print("Entrez le nombre : ");
-                int a6 = input.nextInt();
-                racineCarree(a6);
-                break;
-            case 7:
-                System.out.print("Entrez un nombre entier : ");
-                int n = input.nextInt();
-                Factorielle(n);
-                break;
-            default:
-                System.out.println("Choix invalide !");
-        }
 
     }
 
@@ -112,12 +121,9 @@ public class Main {
 
 
     // Fonction pour calculer la puissance
-    public static void Puissance(int a, int b)
+    public static void Puissance(double a, double b)
     {
-        int puissance = 1;
-        for (int i = 1; i <= b; ++i){
-            puissance *= a;
-        }
+        double puissance = Math.pow(a,b);
         System.out.println("La puissance est : " + puissance);
     }
 

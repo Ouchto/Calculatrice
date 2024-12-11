@@ -14,48 +14,32 @@ public class Main {
         System.out.println("6. Racine carrée ");
         System.out.println("7. Factorielle ");
 
-
         System.out.print("Entrez le choix : ");
         int choix = input.nextInt();
 
         switch (choix) {
             case 1:
-                System.out.print("Entrez le premiere nombre : ");
-                int a1 = input.nextInt();
-                System.out.print("Entrez le dexieme nombre : ");
-                int b1 = input.nextInt();
-                Somme(a1, b1);
+                var table1 = Nums(input);
+                Somme(table1[0], table1[1]);
                 break;
             case 2:
-                System.out.print("Entrez le premiere nombre : ");
-                int a2 = input.nextInt();
-                System.out.print("Entrez le dexieme nombre : ");
-                int b2 = input.nextInt();
-                Soustra(a2, b2);
+                var table2 = Nums(input);
+                Soustra(table2[0], table2[1]);
                 break;
             case 3:
-                System.out.print("Entrez le premiere nombre : ");
-                int a3 = input.nextInt();
-                System.out.print("Entrez le dexieme nombre : ");
-                int b3 = input.nextInt();
-                Produit(a3, b3);
+                var table3 = Nums(input);
+                Produit(table3[0], table3[1]);
                 break;
             case 4:
-                System.out.print("Entrez le premiere nombre : ");
-                int a4 = input.nextInt();
-                System.out.print("Entrez le dexieme nombre : ");
-                int b4 = input.nextInt();
-                Division(a4, b4);
+                var table4 = Nums(input);
+                Division(table4[0], table4[1]);
                 break;
             case 5:
-                System.out.print("Entrez le premiere nombre : ");
-                int a5 = input.nextInt();
-                System.out.print("Entrez le dexieme nombre : ");
-                int b5 = input.nextInt();
-                Puissance(a5, b5);
+                var table5 = Nums(input);
+                Puissance(table5[0], table5[1]);
                 break;
             case 6:
-                System.out.print("Entrez le premiere nombre : ");
+                System.out.print("Entrez le nombre : ");
                 int a6 = input.nextInt();
                 racineCarree(a6);
                 break;
@@ -68,10 +52,25 @@ public class Main {
                 System.out.println("Choix invalide !");
         }
 
-
     }
 
-    // la fonction d'addition
+
+    // les deux nombres
+    public static int[]  Nums(Scanner input){
+
+        System.out.print("Entrez le premiere nombre : ");
+        int a = input.nextInt();
+        System.out.print("Entrez le dexieme nombre : ");
+        int b = input.nextInt();
+        int[] tableau = new int[2];
+
+        tableau[0] = a;
+        tableau[1] = b;
+        return tableau;
+    }
+
+
+    // Fonction pour l'addition
     public static void Somme(int a, int b)
     {
         int somme;
@@ -79,7 +78,8 @@ public class Main {
         System.out.println("la somme est : " + somme);
     }
 
-    // la fonction de soustraction
+
+    // Fonction pour la soustraction
     public static void Soustra(int a, int b)
     {
         int soustra;
@@ -87,7 +87,8 @@ public class Main {
         System.out.println("la soustraction est : " + soustra);
     }
 
-    // la fonction de multiplication
+
+    // Fonction pour la multiplication
     public static void Produit(int a, int b)
     {
         int produit;
@@ -95,7 +96,8 @@ public class Main {
         System.out.println("le produit est : " + produit);
     }
 
-    // la fonction de division
+
+    // Fonction pour la division
     public static void Division(int a, int b)
     {
         if (b != 0){
@@ -107,7 +109,9 @@ public class Main {
         }
 
     }
-    // la fonction de Puissance
+
+
+    // Fonction pour calculer la puissance
     public static void Puissance(int a, int b)
     {
         int puissance = 1;
@@ -117,7 +121,8 @@ public class Main {
         System.out.println("La puissance est : " + puissance);
     }
 
-    // la fonction de racine carrée
+
+    // Fonction pour calculer le racine carrée
     public static void racineCarree(double n) {
         if (n >= 0) {
             double result = Math.sqrt(n);
@@ -127,7 +132,8 @@ public class Main {
         }
     }
 
-    // la fonction de factorielle
+
+    // Fonction pour calculer la factorielle
     public static void Factorielle(int n) {
         if (n < 0) {
             System.out.println("Erreur : la factorielle d'un nombre négatif n'est pas définie !");
@@ -139,7 +145,4 @@ public class Main {
             System.out.println("La factorielle de " + n + " est : " + fact);
         }
     }
-
-
-
 }
